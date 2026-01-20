@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Калькулятор Калорий</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">🍎 Калории</h1>
+                <p class="app-subtitle">Твой помощник в питании</p>
+            </div>
+        </header>
+
+        <!-- Daily Summary Card -->
+        <div class="summary-card">
+            <div class="summary-header">
+                <span class="summary-date">Сегодня</span>
+                <button class="settings-btn">⚙️</button>
+            </div>
+            
+            <div class="calorie-circle">
+                <div class="circle-content">
+                    <span class="calories-consumed">1,240</span>
+                    <span class="calories-total">/ 2,000</span>
+                    <span class="calories-label">ккал</span>
+                </div>
+                <svg class="progress-ring" width="200" height="200">
+                    <circle class="progress-ring-bg" cx="100" cy="100" r="85" />
+                    <circle class="progress-ring-fill" cx="100" cy="100" r="85" />
+                </svg>
+            </div>
+
+            <div class="macros-grid">
+                <div class="macro-item">
+                    <div class="macro-icon">🍗</div>
+                    <div class="macro-info">
+                        <span class="macro-value">65г</span>
+                        <span class="macro-label">Белки</span>
+                    </div>
+                </div>
+                <div class="macro-item">
+                    <div class="macro-icon">🥑</div>
+                    <div class="macro-info">
+                        <span class="macro-value">45г</span>
+                        <span class="macro-label">Жиры</span>
+                    </div>
+                </div>
+                <div class="macro-item">
+                    <div class="macro-icon">🍞</div>
+                    <div class="macro-info">
+                        <span class="macro-value">180г</span>
+                        <span class="macro-label">Углеводы</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meals Section -->
+        <div class="meals-section">
+            <h2 class="section-title">Приемы пищи</h2>
+            
+            <div class="meal-card">
+                <div class="meal-header">
+                    <div class="meal-icon">🌅</div>
+                    <div class="meal-info">
+                        <h3 class="meal-name">Завтрак</h3>
+                        <p class="meal-time">08:30</p>
+                    </div>
+                    <div class="meal-calories">
+                        <span class="meal-cal-value">420</span>
+                        <span class="meal-cal-label">ккал</span>
+                    </div>
+                </div>
+                <div class="meal-items">
+                    <div class="food-item">
+                        <span class="food-name">Овсянка с ягодами</span>
+                        <span class="food-cal">280 ккал</span>
+                    </div>
+                    <div class="food-item">
+                        <span class="food-name">Кофе с молоком</span>
+                        <span class="food-cal">140 ккал</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-card">
+                <div class="meal-header">
+                    <div class="meal-icon">☀️</div>
+                    <div class="meal-info">
+                        <h3 class="meal-name">Обед</h3>
+                        <p class="meal-time">13:00</p>
+                    </div>
+                    <div class="meal-calories">
+                        <span class="meal-cal-value">620</span>
+                        <span class="meal-cal-label">ккал</span>
+                    </div>
+                </div>
+                <div class="meal-items">
+                    <div class="food-item">
+                        <span class="food-name">Куриная грудка</span>
+                        <span class="food-cal">320 ккал</span>
+                    </div>
+                    <div class="food-item">
+                        <span class="food-name">Рис с овощами</span>
+                        <span class="food-cal">300 ккал</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-card empty">
+                <div class="meal-header">
+                    <div class="meal-icon">🌙</div>
+                    <div class="meal-info">
+                        <h3 class="meal-name">Ужин</h3>
+                        <p class="meal-time">Не добавлено</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Button -->
+        <button class="fab">
+            <span class="fab-icon">+</span>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
