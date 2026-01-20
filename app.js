@@ -4,6 +4,10 @@ let tg = window.Telegram.WebApp;
 // Расширяем приложение на весь экран
 tg.expand();
 
+// Включаем полноэкранный режим
+tg.isFullscreen = true;
+tg.requestFullscreen();
+
 // Настраиваем цвета темы
 tg.setHeaderColor('#667eea');
 tg.setBackgroundColor('#f8f9ff');
